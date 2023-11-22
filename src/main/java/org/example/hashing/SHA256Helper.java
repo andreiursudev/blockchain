@@ -15,7 +15,9 @@ public class SHA256Helper {
 			StringBuilder hexadecimalString = new StringBuilder();
 
             for (byte b : hash) {
-                String hexadecimal = Integer.toHexString(getAbsoluteValue(b));
+                String hexadecimal = Integer.toHexString(transformToPositiveValue(b));
+
+				//padding - makes sure the hexadecimalString will have 64 characters
                 if (hexadecimal.length() == 1) hexadecimalString.append('0');
                 hexadecimalString.append(hexadecimal);
             }
@@ -27,7 +29,7 @@ public class SHA256Helper {
 		}
 	}
 
-	private static int getAbsoluteValue(byte hash) {
+	private static int transformToPositiveValue(byte hash) {
 		return 0xff & hash;
 	}
 }
