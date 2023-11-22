@@ -7,7 +7,7 @@ public class BlockChain {
 
     // immutable ledger
     // we are not able to remove blocks
-    private List<Block> blockChain;
+    private final List<Block> blockChain;
 
     public BlockChain() {
         this.blockChain = new LinkedList<>();
@@ -15,14 +15,6 @@ public class BlockChain {
 
     public void addBlock(Block block) {
         this.blockChain.add(block);
-    }
-
-    public List<Block> getBlockChain() {
-        return this.blockChain;
-    }
-
-    public int getSize() {
-        return this.blockChain.size();
     }
 
     @Override

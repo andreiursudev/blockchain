@@ -6,12 +6,12 @@ import java.util.Date;
 
 public class Block {
 
-    private int id;
+    private final int id;
     private int nonce;
-    private long timeStamp;
+    private final long timeStamp;
     private String hash;
-    private String previousHash;
-    private String transaction;
+    private final String previousHash;
+    private final String transaction;
 
     public Block(int id, String transaction, String previousHash) {
         this.id = id;
@@ -34,20 +34,8 @@ public class Block {
         this.nonce++;
     }
 
-    public void setPreviousHash(String previousHash) {
-        this.previousHash = previousHash;
-    }
-
-    public String getPreviousHash() {
-        return this.previousHash;
-    }
-
     public String getHash() {
         return this.hash;
-    }
-
-    public void setHash(String hash) {
-        this.hash = hash;
     }
 
     @Override
