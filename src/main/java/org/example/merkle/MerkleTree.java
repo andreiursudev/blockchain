@@ -15,7 +15,7 @@ public class MerkleTree {
     }
 
     //the root is in this list in the end
-    public List<String> getMerkeRoot() {
+    public List<String> getMerkleRoot() {
         return construct(this.transactions);
     }
 
