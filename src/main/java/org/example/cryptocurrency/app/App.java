@@ -62,5 +62,6 @@ public class App {
         miner.mine(block3, chain);
 
         System.out.println("Miner's reward: " + miner.getReward());
+        System.out.println("Miner's reward: " + miner.getReward());
     }
 }
